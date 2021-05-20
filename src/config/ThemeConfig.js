@@ -32,10 +32,10 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.primary1};
     color: ${({ theme }) => theme.secondary1};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.30s ease-in;
     font-size: 62.5%; 
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
   }
 
   * {
@@ -43,5 +43,9 @@ export const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
     }
+
+  li {
+    list-style: none;
+  }
 
 `;

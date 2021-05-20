@@ -88,9 +88,9 @@ export const particlesData = {
         },
       },
       bubble: {
-        distance: 143.85614385614386,
-        size: 7.992007992007992,
-        duration: 1.118881118881119,
+        distance: 145,
+        size: 10,
+        duration: 1.25,
         opacity: 1,
         speed: 3,
       },
