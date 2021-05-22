@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const lightTheme = {
   primary0: "#F7F7F8",
   primary1: "#EAEAEC",
-  primary2: "#88888A",
+  primary2: "#D8D8D8",
   secondary2: "#464649",
   secondary1: "#29292C",
   secondary0: "#18181B",
@@ -17,7 +17,7 @@ export const lightTheme = {
 export const darkTheme = {
   secondary0: "#F7F7F8",
   secondary1: "#EAEAEC",
-  secondary2: "#88888A",
+  secondary2: "#D8D8D8",
   primary2: "#464649",
   primary1: "#29292C",
   primary0: "#18181B",
@@ -35,7 +35,9 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.30s ease-in;
     font-size: 62.5%; 
     overflow-x: hidden;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   * {
