@@ -21,9 +21,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
-  faGithubSquare,
-  faTwitterSquare,
-  faTwitter,
   faGithub,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
