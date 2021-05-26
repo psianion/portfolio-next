@@ -12,9 +12,15 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500;700&family=Poppins:wght@500;700;600&display=swap"
             rel="stylesheet"
+            type="text/css"
+            href="https://fonts.googleapis.com/css?family=Poppins"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto"
+            type="text/css"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />

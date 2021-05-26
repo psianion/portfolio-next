@@ -1,25 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import {
-  fadeInLeft,
-  fadeInRight,
-  stagger3,
-  stagger1,
-} from "../common/animations";
+import { fadeInRight, stagger1 } from "../common/animations";
 
 function HomeSection() {
   return (
     <HomeContainer exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <motion.div variants={stagger1}>
+      <HomeContent variants={stagger1}>
         <Head1 variants={fadeInRight}>Hi, my name is</Head1>
         <Head2 variants={fadeInRight}>Sainayan Mahto</Head2>
         <Head3 variants={fadeInRight}>Web Developer & Designer.</Head3>
         <Para1 variants={fadeInRight}>
           I'm a full-stack web developer who specializes in building digital web
-          experiences. Currently I'm a student at BITS Pilani, India. I have
-          serious passion for UI effects, animations and creating intuitive,
-          dynamic user experiences.
+          experiences. Currently I'm a student at{" "}
+          <Highlight>BITS Pilani</Highlight>, India. I have serious passion for
+          UI effects, animations and creating intuitive, dynamic user
+          experiences.
         </Para1>
         <Button
           variants={fadeInRight}
@@ -28,22 +24,33 @@ function HomeSection() {
         >
           Get in Touch
         </Button>
-      </motion.div>
+      </HomeContent>
     </HomeContainer>
   );
 }
 
+const Highlight = styled.span`
+  color: ${({ theme }) => theme.highlight1};
+`;
+
 const HomeContainer = styled(motion.div)`
   height: 60vh;
-  margin: 7vh 4.5rem;
+  margin: 7vh 4.5rem 0 4.5rem;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    margin: 7vh 3rem;
+    margin: 7vh 3.15rem;
     text-align: center;
+  }
+`;
+
+const HomeContent = styled(motion.div)`
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -93,6 +100,7 @@ const Button = styled(motion.button)`
   color: ${({ theme }) => theme.highlight1};
   background: none;
   font-family: "Poppins", sans-serif;
+  width: 10rem;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-top: 2rem;

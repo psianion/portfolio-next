@@ -165,15 +165,14 @@ const Sidebar = styled(motion.div)`
 
 const SocialBar = styled(motion.div)`
   position: fixed;
-  bottom: 0;
+  height: 100%;
   right: 0;
-  height: 100vh;
+  bottom: 0;
   width: 4.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  z-index: 1;
   padding: 0rem 1rem;
 
   @media (max-width: 768px) {
@@ -229,6 +228,7 @@ const SocialButton = styled(motion.div)`
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+  z-index: 1;
 
   @media (max-width: 768px) {
     width: 1.2rem;

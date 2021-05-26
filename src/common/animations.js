@@ -13,6 +13,21 @@ export const fadeInLeft = {
   },
 };
 
+export const fadeInBottom = {
+  initial: {
+    y: 0,
+    opacity: 0,
+  },
+  animate: {
+    y: 60,
+    opacity: 1,
+    trasition: {
+      duration: 0.3,
+      ease: "ease-in-out",
+    },
+  },
+};
+
 export const fadeInRight = {
   initial: {
     x: -60,
@@ -32,6 +47,14 @@ export const stagger3 = {
   animate: {
     transition: {
       staggerChildren: 0.3,
+    },
+  },
+};
+
+export const stagger2 = {
+  animate: {
+    transition: {
+      staggerChildren: 0.2,
     },
   },
 };

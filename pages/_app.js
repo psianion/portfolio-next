@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
       >
         <Particles params={particlesData} height="100%" />
       </div>
-
       <Component {...pageProps} />
     </ThemeProvider>
   );

@@ -38,7 +38,24 @@ export const GlobalStyles = createGlobalStyle`
     // font-family: 'Roboto', sans-serif;
     // font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
+
+  
   }
+
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.primary1};
+}
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.secondary2};
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: ${({ theme }) => theme.secondary1};
+}
 
   * {
   box-sizing: border-box;
