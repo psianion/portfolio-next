@@ -11,8 +11,8 @@ function HomeSection() {
         <Head2 variants={fadeInRight}>Sainayan Mahto</Head2>
         <Head3 variants={fadeInRight}>Web Developer & Designer.</Head3>
         <Para1 variants={fadeInRight}>
-          I'm a full-stack web developer who specializes in building digital web
-          experiences. Currently I'm a student at{" "}
+          I'm a <Highlight>full-stack web developer</Highlight> who specializes
+          in building digital web experiences. Currently I'm a student at{" "}
           <Highlight>BITS Pilani</Highlight>, India. I have serious passion for
           UI effects, animations and creating intuitive, dynamic user
           experiences.
@@ -43,6 +43,7 @@ const HomeContainer = styled(motion.div)`
   justify-content: center;
 
   @media (max-width: 768px) {
+    height: 50vh;
     margin: 7vh 3.15rem;
     text-align: center;
   }
@@ -78,6 +79,7 @@ const Head3 = styled(motion.p)`
   color: ${({ theme }) => theme.secondary1};
   font-size: 2.25rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
     font-size: 1.1rem;

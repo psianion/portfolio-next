@@ -48,7 +48,6 @@ function Navbar({ toggleTheme }) {
             <FontAwesomeIcon icon={faBars} />
           )}
         </NavButton>
-        <LogoH1>logo.</LogoH1>
         <NavButton
           onClick={toggleTheme}
           title="Dark Mode"
