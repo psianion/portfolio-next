@@ -38,8 +38,6 @@ export const GlobalStyles = createGlobalStyle`
     // font-family: 'Roboto', sans-serif;
     // font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
-
-  
   }
 
   ::-webkit-scrollbar {
