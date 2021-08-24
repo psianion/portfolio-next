@@ -35,7 +35,7 @@ function Navbar({ toggleTheme }) {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <Nav variants={stagger3}>
-        <NavButton
+        {/*<NavButton
           onClick={toggleMenu}
           title="Menu"
           variants={fadeInRight}
@@ -47,7 +47,7 @@ function Navbar({ toggleTheme }) {
           ) : (
             <FontAwesomeIcon icon={faBars} />
           )}
-        </NavButton>
+        </NavButton> */}
         <NavButton
           onClick={toggleTheme}
           title="Dark Mode"
@@ -133,7 +133,7 @@ const Nav = styled(motion.div)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0rem 1rem;
   z-index: 2;
 

@@ -11,9 +11,9 @@ function ProjectSection() {
         <h1>PROJECTS I HAVE WORKED ON</h1>
       </Head>
       <ProjectContainer>
-        <ProjectImage></ProjectImage>
+        <ProjectList></ProjectList>
         <ProjectContent>
-          <h1>Project Name</h1>
+          <h1>Project Name </h1>
           <h2>Duration</h2>
           <h3>What is it?</h3>
           <h4>Tech used</h4>
@@ -68,18 +68,35 @@ const ProjectContainer = styled(motion.div)`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+    width: 90%;
+    height: 35rem;
+    flex-direction: column-reverse;
+  }
 `;
 
-const ProjectImage = styled(motion.div)`
+const ProjectList = styled(motion.div)`
   width: 49.5%;
   height: 100%;
   background-color: ${({ theme }) => `${theme.primary2}20`};
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+    height: 60%;
+    width: 98%;
+  }
 `;
 
 const ProjectContent = styled(motion.div)`
   width: 49.5%;
   height: 100%;
   background-color: ${({ theme }) => `${theme.primary2}20`};
+
+  @media (max-width: 768px) {
+    width: 98%;
+  }
 `;
 
 export default ProjectSection;
