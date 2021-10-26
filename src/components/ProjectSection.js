@@ -2,7 +2,15 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { fadeInBottom, fadeInRight, stagger3 } from "../common/animations";
+import {
+  fadeInBottom,
+  fadeInRight,
+  fadeInLeft,
+  stagger3,
+} from "../common/animations";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const data = require("../assets/ProjectData");
 
@@ -43,11 +51,38 @@ function ProjectSection() {
           <WebView>
             <img
               src={active.webImage}
-              onClick={() => window.open(active.liveLink)}
+              onClick={() => window.open(active.liveLink[0])}
             />
           </WebView>
           <ActiveContent>
-            <h1>{active.name}</h1>
+            {active.liveLink && (
+              <SocialButton
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => window.open(active.liveLink[0])}
+              >
+                <FontAwesomeIcon icon={faLink} />
+                <h2>{active.liveLink[1]}</h2>
+              </SocialButton>
+            )}
+            <SocialButton
+              onClick={() => window.open(active.githubLink[0])}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FontAwesomeIcon icon={faGithub} />
+              <h2>{active.githubLink[1]}</h2>
+            </SocialButton>
+            {active.githubLink2 && (
+              <SocialButton
+                onClick={() => window.open(active.githubLink2[0])}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <FontAwesomeIcon icon={faGithub} />
+                <h2>{active.githubLink2[1]}</h2>
+              </SocialButton>
+            )}
           </ActiveContent>
         </ProjectContent>
       </ProjectContainer>
@@ -61,6 +96,30 @@ const Container = styled(motion.div)`
   align-items: center;
   text-align: center;
   margin-top: 5rem;
+`;
+
+const SocialButton = styled(motion.div)`
+  color: ${({ theme }) => theme.highlight0};
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  h2 {
+    font-size: 1.3rem;
+    margin-left: 0.4rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
 `;
 
 const Head = styled(motion.div)`
@@ -108,7 +167,7 @@ const ProjectContainer = styled(motion.div)`
 `;
 
 const ProjectList = styled(motion.div)`
-  width: 39.5%;
+  width: 44.5%;
   height: 100%;
   background-color: ${({ theme }) => `${theme.primary2}20`};
   overflow-y: auto;
@@ -172,7 +231,7 @@ const Title = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 29.5rem;
+  width: 34rem;
 
   h1 {
     font-size: 1rem;
@@ -205,7 +264,7 @@ const Tech = styled(motion.div)`
 `;
 
 const ProjectContent = styled(motion.div)`
-  width: 59.5%;
+  width: 54.5%;
   height: 100%;
   background-color: ${({ theme }) => `${theme.primary2}20`};
   display: flex;
@@ -221,22 +280,29 @@ const WebView = styled(motion.div)`
   width: 95%;
   cursor: pointer;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 
   img {
-    width: 75%;
+    width: 95%;
     height: auto;
-    box-shadow: 1px 0px 10px 0px rgba(119, 44, 232, 1);
-    margin-top: 1rem;
+    box-shadow: -10px -10px 0px 0px rgba(119, 44, 232, 1);
+    margin-top: 1.5rem;
     transition: all 0.2s ease-in-out;
-
-    :hover {
-      box-shadow: 1px 0px 20px 0px rgba(119, 44, 232, 1);
-    }
   }
 `;
 const ActiveContent = styled(motion.div)`
-  margin-top: 0.5rem;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    font-weight: 600;
+    color: #f7f7f8;
+    font-size: 1rem;
+  }
 `;
 
 export default ProjectSection;
