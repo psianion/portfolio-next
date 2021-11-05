@@ -40,7 +40,7 @@ function ProjectSection() {
                 <p>{i.desc}</p>
                 <Tech>
                   {i.tech.map((i) => (
-                    <h5>{i}</h5>
+                    <h5 key={i}>{i}</h5>
                   ))}
                 </Tech>
               </Content>
@@ -115,10 +115,12 @@ const SocialButton = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    width: 1.2rem;
-    height: 1.2rem;
     font-size: 1rem;
     margin-bottom: 0.8rem;
+
+    h2 {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -171,6 +173,7 @@ const ProjectList = styled(motion.div)`
   height: 100%;
   background-color: ${({ theme }) => `${theme.primary2}20`};
   overflow-y: auto;
+  overflow-x: none;
 
   ::-webkit-scrollbar {
     width: 5px;
@@ -189,7 +192,6 @@ const ProjectList = styled(motion.div)`
 
   @media (max-width: 768px) {
     margin-top: 0.5rem;
-    height: 60%;
     width: 98%;
   }
 `;
@@ -212,26 +214,38 @@ const Project = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    width: 99%;
-    height: 31%;
+    width: 98%;
+    height: 20%;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.primary2};
+      border-left: none;
+    }
   }
 `;
 
 const Content = styled(motion.div)`
   margin-left: 0.5rem;
+  width: 98%;
   text-align: left;
 
   p {
     font-size: 0.75rem;
     margin-bottom: 0.25rem;
   }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 0.5rem;
+    }
+  }
 `;
 
 const Title = styled(motion.div)`
   display: flex;
   flex-direction: row;
+  width: 98%;
   justify-content: space-between;
-  width: 34rem;
 
   h1 {
     font-size: 1rem;
@@ -243,6 +257,17 @@ const Title = styled(motion.div)`
     font-style: italic;
     color: ${({ theme }) => `${theme.secondary2}80`};
     font-size: 0.65rem;
+  }
+
+  @media (max-width: 768px) {
+    h5 {
+      font-size: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    h1 {
+      font-size: 0.8rem;
+    }
   }
 `;
 
@@ -261,6 +286,12 @@ const Tech = styled(motion.div)`
     margin-right: 0.25rem;
     border-radius: 0.2rem;
   }
+
+  @media (max-width: 768px) {
+    h5 {
+      font-size: 0.5rem;
+    }
+  }
 `;
 
 const ProjectContent = styled(motion.div)`
@@ -273,6 +304,7 @@ const ProjectContent = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 98%;
+    height: 18rem;
   }
 `;
 
@@ -302,6 +334,10 @@ const ActiveContent = styled(motion.div)`
     font-weight: 600;
     color: #f7f7f8;
     font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    width: 80%;
   }
 `;
 

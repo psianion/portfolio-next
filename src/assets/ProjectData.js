@@ -8,7 +8,7 @@ module.exports = [
     githubLink: ["https://github.com/psianion/hq-next", "Client v2"],
     githubLink2: ["https://github.com/pvphq/hq-server", "Server"],
     liveLink: ["https://www.pvphq.in", "Live"],
-    webImage: "https://i.imgur.com/u66iRvI.png",
+    webImage: "/projects/hq.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ module.exports = [
     tech: ["ReactJS", "Framer"],
     githubLink: ["https://github.com/psianion/react-player", "Github"],
     liveLink: ["https://react-lofi.netlify.app/", "Live App"],
-    webImage: "https://i.imgur.com/u66iRvI.png",
+    webImage: "/projects/waves.png",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ module.exports = [
     duration: "Sept - Oct 2020",
     tech: ["ReactJS", "Redux", "NodeJS", "ExpressJS", "MongoDB"],
     githubLink: ["https://github.com/psianion/arte", "Github Link"],
-    webImage: "https://i.imgur.com/u66iRvI.png",
+    webImage: "/projects/arte.png",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ module.exports = [
     tech: ["JavaScript", "NodeJS", "DiscordJS", "MongoDB", "ExpressJS"],
     githubLink: ["https://github.com/pvphq/rotomhq", "Github"],
     liveLink: ["https://discord.com/invite/QEFTu9J", "Discord App"],
-    webImage: "https://i.imgur.com/u66iRvI.png",
+    webImage: "/projects/rotom.png",
   },
   {
     id: 5,
@@ -46,6 +46,6 @@ module.exports = [
     duration: "February 2021",
     tech: ["ReactJS", "HTML", "CSS", "JavaScript"],
     githubLink: ["https://github.com/psianion/crm-app", "Github Link"],
-    webImage: "https://i.imgur.com/u66iRvI.png",
+    webImage: "/projects/crm.png",
   },
 ];
