@@ -152,7 +152,6 @@ const ProjectContainer = styled(motion.div)`
   width: 80rem;
   height: 25rem;
   background-color: ${({ theme }) => theme.primary1};
-  margin-bottom: 10rem;
   margin-top: 5rem;
   display: flex;
   overflow-y: auto;
