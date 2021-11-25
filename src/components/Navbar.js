@@ -166,7 +166,7 @@ const SocialBar = styled(motion.div)`
   position: fixed;
   height: 100%;
   right: 0;
-  bottom: 0;
+  bottom: 7rem;
   width: 4.5rem;
   display: flex;
   flex-direction: column;
@@ -176,6 +176,7 @@ const SocialBar = styled(motion.div)`
 
   @media (max-width: 768px) {
     padding: 0.5rem 0.5rem;
+    bottom: 2.5rem;
     width: 2.75rem;
   }
 `;
