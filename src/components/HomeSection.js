@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 import { fadeInRight, stagger1 } from "../common/animations";
 
 function HomeSection() {
-  const router = useRouter();
-
   return (
     <HomeContainer exit={{ opacity: 0 }} initial="initial" animate="animate">
       <HomeContent variants={stagger1}>
@@ -24,10 +21,13 @@ function HomeSection() {
           variants={fadeInRight}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1j15nB7jUm0hz3IWu0Uy8yB49viAnTlH_/view?usp=sharing"
+            )
+          }
         >
-          <a href="/Sainayan.pdf" download>
-            Download Resume
-          </a>
+          Resume
         </Button>
       </HomeContent>
     </HomeContainer>
@@ -107,7 +107,7 @@ const Button = styled(motion.button)`
   color: ${({ theme }) => theme.highlight1};
   background: none;
   font-family: "Poppins", sans-serif;
-  width: 15rem;
+  width: 10rem;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-top: 2rem;

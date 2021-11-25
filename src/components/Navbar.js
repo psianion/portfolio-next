@@ -63,6 +63,7 @@ function Navbar({ toggleTheme }) {
           variants={fadeInLeft}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={() => window.open("https://www.linkedin.com/in/psianion/")}
         >
           <FontAwesomeIcon icon={faLinkedin} />
         </SocialButton>
@@ -70,6 +71,7 @@ function Navbar({ toggleTheme }) {
           variants={fadeInLeft}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={() => window.open("https://github.com/psianion")}
         >
           <FontAwesomeIcon icon={faGithub} />
         </SocialButton>
@@ -77,6 +79,7 @@ function Navbar({ toggleTheme }) {
           variants={fadeInLeft}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          onClick={() => window.open("https://www.instagram.com/psianion/")}
         >
           <FontAwesomeIcon icon={faInstagram} />
         </SocialButton>
