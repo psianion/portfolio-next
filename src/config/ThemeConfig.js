@@ -40,6 +40,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 
+  a {
+    color: ${({ theme }) => theme.highlight1};
+    text-decoration: none;
+  }
+
   ::-webkit-scrollbar {
   width: 10px;
 }
