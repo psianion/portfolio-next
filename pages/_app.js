@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../src/config/ThemeConfig";
 import { particlesData } from "../src/common/particles";
 import Navbar from "../src/components/Navbar";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("dark");
@@ -15,6 +16,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
+      <Head>
+        <title>Sainayan's Portfolio</title>
+        <link rel="icon" type="image/png" href="/code.png" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyles />
       <Navbar toggleTheme={toggleTheme} />
       <div

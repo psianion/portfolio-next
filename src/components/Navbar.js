@@ -181,16 +181,6 @@ const SocialBar = styled(motion.div)`
   }
 `;
 
-const LogoH1 = styled.h1`
-  color: ${({ theme }) => theme.highlight1};
-  font-size: 2rem;
-  font-weight: 600;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
-`;
-
 const NavButton = styled(motion.button)`
   background-color: ${({ theme }) => theme.primary1};
   color: ${({ theme }) => theme.secondary1};
