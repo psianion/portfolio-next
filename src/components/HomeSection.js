@@ -23,7 +23,7 @@ function HomeSection() {
           whileTap={{ scale: 0.95 }}
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1j15nB7jUm0hz3IWu0Uy8yB49viAnTlH_/view?usp=sharing"
+              "https://drive.google.com/file/d/1NNWODE5KqGBlF4_6ICR50ESX_WJb1UwF/view?usp=sharing"
             )
           }
         >
